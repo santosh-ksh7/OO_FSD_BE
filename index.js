@@ -9,7 +9,8 @@ const cookieParser = require("cookie-parser");
 const corsOptions = require("./utils/corsOption");
 const cors = require("cors");
 const sequelize = require("./utils/dbConnection");
-const userRouter = require("./routes/userRoutes")
+const userRouter = require("./routes/userRoutes");
+const notesRouter = require("./routes/notesRoutes");
 
 
 const app = express();
@@ -35,7 +36,8 @@ app.use("/", express.static(path.join(__dirname, "public")));
 
 // * rootRouter
 app.use("/", rootRouter);
-app.use("/user", userRouter);
+app.use("/users", userRouter);
+app.use("/notes", notesRouter);
 
 
 // * Handling resources that doesn't exist

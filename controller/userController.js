@@ -4,11 +4,16 @@ const sequelize = require("../utils/dbConnection");
 
 
 // * Get all users
-const getAllUsers = async (req, res) => {
+const getAllUsers = async (req, res, next) => {
     try {
-        const dbResponse = await sequelize.query("SELECT ")
+        const dbResponse = await sequelize.query("SELECT id, name, active as status, roles FROM users");
+        if(dbResponse?.length){
+            res.status(200).send({data: dbResponse})
+        }else{
+            res.status(204).send({message: "No users found!"})
+        }
     } catch (error) {
-        
+        next(error);
     }
 }
 
