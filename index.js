@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5000;
 
 
 
-app.use(loggerMiddleware);
+// app.use(loggerMiddleware);
 
 app.use(cors(corsOptions));
 

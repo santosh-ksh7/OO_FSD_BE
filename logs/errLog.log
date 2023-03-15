@@ -5,3 +5,21 @@ Thu Mar 09 2023 15:42:52 GMT+0530 (India Standard Time)	6c0c6d6d-ef02-49aa-8c04-
 Thu Mar 09 2023 15:44:01 GMT+0530 (India Standard Time)	f443c439-5ea2-49ac-9397-fde3a29bbd56	SequelizeDatabaseError: Incorrect syntax near the keyword 'user'.	GET	/user	undefined
 Thu Mar 09 2023 15:52:43 GMT+0530 (India Standard Time)	af5017da-b35a-40d7-bd7b-8106139eca74	SequelizeDatabaseError: Incorrect syntax near the keyword 'user'.	GET	/users	undefined
 Thu Mar 09 2023 16:10:22 GMT+0530 (India Standard Time)	4af04ec8-5262-4f65-a5b2-ccc176181563	SequelizeDatabaseError: Incorrect syntax near the keyword 'user'.	GET	/users	undefined
+Tue Mar 14 2023 09:51:30 GMT+0530 (India Standard Time)	8595fe15-96cf-4f0e-8df9-db051c12c14b	SequelizeDatabaseError: Invalid column name 'sam10'.	POST	/users	undefined
+Tue Mar 14 2023 09:52:05 GMT+0530 (India Standard Time)	191519f6-6cb2-440d-bd52-2ce71f5008eb	SequelizeDatabaseError: Invalid column name 'sam10'.	POST	/users	undefined
+Tue Mar 14 2023 09:52:40 GMT+0530 (India Standard Time)	3852f01d-99ef-4869-beab-8e0fc17bb4ec	SequelizeDatabaseError: Invalid column name 'sam1'.	POST	/users	undefined
+Tue Mar 14 2023 10:03:11 GMT+0530 (India Standard Time)	da5d50b6-f0d9-43ef-9367-f372f69a9f42	SequelizeDatabaseError: Invalid column name 'sam1'.	POST	/users	undefined
+Tue Mar 14 2023 10:56:31 GMT+0530 (India Standard Time)	cf264c54-8cbf-4ea1-9949-59f6fe78c6c4	SequelizeDatabaseError: Incorrect syntax near '@password'.	POST	/users	undefined
+Tue Mar 14 2023 10:57:32 GMT+0530 (India Standard Time)	b7639c5d-ab28-4116-a2cc-2dc4e4bc685c	SequelizeDatabaseError: Incorrect syntax near '@password'.	POST	/users	undefined
+Tue Mar 14 2023 13:26:37 GMT+0530 (India Standard Time)	3c4cde18-744b-4ea2-a2f3-de111bd42423	Error: Name is a required field	POST	/users	undefined
+Tue Mar 14 2023 13:26:49 GMT+0530 (India Standard Time)	94f99a29-95b1-465c-96e4-4c86c05e65bd	ReferenceError: name is not defined	POST	/users	undefined
+Tue Mar 14 2023 13:28:17 GMT+0530 (India Standard Time)	caecf0ef-63c6-4b7b-ac17-398f1a622e77	ReferenceError: name is not defined	POST	/users	undefined
+Tue Mar 14 2023 13:28:59 GMT+0530 (India Standard Time)	30e5f93b-84f6-4378-a7c0-c12b8e687a89	ReferenceError: name is not defined	POST	/users	undefined
+Tue Mar 14 2023 13:29:24 GMT+0530 (India Standard Time)	6e69075c-7a64-4f7d-92a6-e1e93776dfe9	ReferenceError: name is not defined	POST	/users	undefined
+Tue Mar 14 2023 13:35:46 GMT+0530 (India Standard Time)	566cd6cf-dde8-423c-8fb8-0430b6bc2213	ReferenceError: name is not defined	POST	/users	undefined
+Tue Mar 14 2023 13:37:13 GMT+0530 (India Standard Time)	165589eb-5b6d-4d71-8b29-f3d63e872c6d	Error: Name is a required field	POST	/users	undefined
+Tue Mar 14 2023 13:38:37 GMT+0530 (India Standard Time)	d75f2ee9-0913-4d1e-9281-e3e560b4c125	Error: Name is a required field	POST	/users	undefined
+Tue Mar 14 2023 13:39:05 GMT+0530 (India Standard Time)	0cbdf435-4249-4d6d-b88c-622b382795f0	Error: Password should have a minimum length of 8	POST	/users	undefined
+Tue Mar 14 2023 13:39:17 GMT+0530 (India Standard Time)	70671a80-42b1-4809-ad9e-dbe7faedcb15	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/users	undefined
+Wed Mar 15 2023 12:42:06 GMT+0530 (India Standard Time)	cb8ed24a-70ff-4d9c-82f9-9c584cd4e887	Error: Invalid value	POST	/users	undefined
+Wed Mar 15 2023 12:42:47 GMT+0530 (India Standard Time)	ff4b8fbc-b8c1-4309-81d8-41fa25acff4c	Error: Invalid value	POST	/users	undefined
