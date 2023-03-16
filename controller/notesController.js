@@ -20,4 +20,21 @@ const getAllNotes = async (req, res, next) => {
 
 
 
-module.exports = {getAllNotes}
+// * Get a specific note
+const getASpecificNote = async(req, res, next) => {
+    try {
+        const {ticketNo} = req.params
+        const dbResponse = await sequelize.query("exec getASingleNote @ticketNo=:ticketNo", {replacements: {ticketNo: ticketNo}})
+        if(dbResponse[1]){
+            res.status(200).send({data: dbResponse[0][0]})
+        }else{
+            res.status(204).send({message: "No note available with this identifier."})
+        }
+    } catch (error) {
+        next(error);
+    }
+}
+
+
+
+module.exports = {getAllNotes, getASpecificNote}

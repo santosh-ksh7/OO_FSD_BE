@@ -2,7 +2,11 @@ const express = require("express");
 const router = express.Router();
 const { getAllUsers, createNewUser, updateUser, deleteUser, getASingleUser} = require("../controller/userController");
 const expressValidator = require("express-validator");
+const verifyJWT = require("../middlewares/verifyJWT");
 
+
+
+router.use(verifyJWT)
 
 router.route("/")
     .get(getAllUsers)

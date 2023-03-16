@@ -62,8 +62,8 @@ const createNewUser = async (req, res, next) => {
 
 
 // * Update an existing user
-const updateUser = async (req, res) => {
-
+const updateUser = async (req, res, next) => {
+    
 }
 
 

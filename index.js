@@ -11,6 +11,7 @@ const cors = require("cors");
 const sequelize = require("./utils/dbConnection");
 const userRouter = require("./routes/userRoutes");
 const notesRouter = require("./routes/notesRoutes");
+const authRouter = require("./routes/authRoutes");
 
 
 const app = express();
@@ -36,6 +37,7 @@ app.use("/", express.static(path.join(__dirname, "public")));
 
 // * rootRouter
 app.use("/", rootRouter);
+app.use("/auth", authRouter);
 app.use("/users", userRouter);
 app.use("/notes", notesRouter);
 

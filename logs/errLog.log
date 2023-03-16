@@ -23,3 +23,24 @@ Tue Mar 14 2023 13:39:05 GMT+0530 (India Standard Time)	0cbdf435-4249-4d6d-b88c-
 Tue Mar 14 2023 13:39:17 GMT+0530 (India Standard Time)	70671a80-42b1-4809-ad9e-dbe7faedcb15	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/users	undefined
 Wed Mar 15 2023 12:42:06 GMT+0530 (India Standard Time)	cb8ed24a-70ff-4d9c-82f9-9c584cd4e887	Error: Invalid value	POST	/users	undefined
 Wed Mar 15 2023 12:42:47 GMT+0530 (India Standard Time)	ff4b8fbc-b8c1-4309-81d8-41fa25acff4c	Error: Invalid value	POST	/users	undefined
+Thu Mar 16 2023 12:26:51 GMT+0530 (India Standard Time)	6b3fbd3d-3cb4-49c9-8401-225f74b53cb1	SequelizeDatabaseError: Error converting data type nvarchar to int.	GET	/notes/specific-note/:501	http://localhost:3000
+Thu Mar 16 2023 12:26:51 GMT+0530 (India Standard Time)	15244a97-5605-4caf-8f6b-bf3e5061962c	SequelizeDatabaseError: Error converting data type nvarchar to int.	GET	/notes/specific-note/:501	http://localhost:3000
+Thu Mar 16 2023 18:20:18 GMT+0530 (India Standard Time)	12e49d33-ace3-4192-80fb-037950dd0db2	ReferenceError: sequelize is not defined	POST	/auth/login	undefined
+Thu Mar 16 2023 18:21:18 GMT+0530 (India Standard Time)	fe2d1607-934f-4c2a-8025-d246d57202ad	Error: Invalid Credentials	POST	/auth/login	undefined
+Thu Mar 16 2023 18:21:28 GMT+0530 (India Standard Time)	af088e02-38f7-4702-968d-9393f1dc774c	Error: Name is a required field	POST	/auth/login	undefined
+Thu Mar 16 2023 18:21:37 GMT+0530 (India Standard Time)	64344c81-270a-4e0c-bca4-997a33581e90	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/auth/login	undefined
+Thu Mar 16 2023 18:21:43 GMT+0530 (India Standard Time)	7941fa29-0274-4d9e-a997-493a0d155c92	Error: Password should have a minimum length of 8	POST	/auth/login	undefined
+Thu Mar 16 2023 20:32:27 GMT+0530 (India Standard Time)	9a1299b7-f4b0-4eae-a07a-7d40abfcf8a5	ReferenceError: ACCESS_TOKEN_SECRET is not defined	POST	/auth/login	undefined
+Thu Mar 16 2023 20:35:26 GMT+0530 (India Standard Time)	9d6567b7-3724-4eb4-92a5-55935d12dc13	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/auth/login	undefined
+Thu Mar 16 2023 20:35:28 GMT+0530 (India Standard Time)	8adea939-1d02-4bc9-8265-5761fa048f92	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/auth/login	undefined
+Thu Mar 16 2023 20:35:29 GMT+0530 (India Standard Time)	f8b2ec0e-ac83-47de-95e1-577f9dcb1cb9	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/auth/login	undefined
+Thu Mar 16 2023 20:35:30 GMT+0530 (India Standard Time)	48442439-710f-4d50-83eb-78c0b25ba575	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/auth/login	undefined
+Thu Mar 16 2023 20:35:31 GMT+0530 (India Standard Time)	e56f4525-b4cb-4f92-99f0-afb6e7043362	Error: Password should contain at least one of the special characters from - !, @, #, $, ^	POST	/auth/login	undefined
+Thu Mar 16 2023 20:35:32 GMT+0530 (India Standard Time)	24a4b40a-abe7-4f17-a444-e9c43aaf953d	Too Many Requests: Too many login attempts from this IP, please try again after a minute pause	POST	/login	undefined
+Thu Mar 16 2023 20:35:36 GMT+0530 (India Standard Time)	c5527649-41c9-433a-8ca7-0f0e93233a38	Too Many Requests: Too many login attempts from this IP, please try again after a minute pause	POST	/login	undefined
+Thu Mar 16 2023 20:35:37 GMT+0530 (India Standard Time)	ef5f3e5f-d9dc-4179-9c4b-e7850bfc656b	Too Many Requests: Too many login attempts from this IP, please try again after a minute pause	POST	/login	undefined
+Thu Mar 16 2023 20:53:18 GMT+0530 (India Standard Time)	b9a08e99-3bd7-442c-ac15-bb4448777906	Error: Not Authorized	GET	/auth/refresh	undefined
+Thu Mar 16 2023 20:53:39 GMT+0530 (India Standard Time)	7d2050e9-313e-4fdc-a0f4-5e0ef292ff66	Error: Not Authorized	GET	/auth/refresh	undefined
+Thu Mar 16 2023 20:53:46 GMT+0530 (India Standard Time)	49bc140d-d22a-4cc3-a6bc-9817f04e726d	Error: Not Authorized	GET	/auth/refresh	undefined
+Thu Mar 16 2023 20:54:34 GMT+0530 (India Standard Time)	ba1e8d89-42ed-4454-ac5a-be4e741f65b3	Error: Not Authorized	GET	/auth/refresh	undefined
+Thu Mar 16 2023 21:01:55 GMT+0530 (India Standard Time)	50fcb05b-79c1-4c15-a9dc-3d395248349c	Error: Not Authorized	GET	/auth/refresh	undefined
