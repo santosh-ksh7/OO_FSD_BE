@@ -32,7 +32,7 @@ router.route("/refresh")
     .get(refreshController)
 
 router.route("/logout")
-    .post(logoutController)
+    .get(logoutController)
 
 
 

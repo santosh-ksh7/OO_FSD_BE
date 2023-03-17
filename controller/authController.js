@@ -61,7 +61,7 @@ const loginController = async (req, res, next) => {
                         sameSite: 'None', 
                         maxAge: 10 * 60 * 1000
                     })
-                    res.status(200).send({message: "Logged In Successfully", accessToken})
+                    res.status(200).send({message: "Logged In Successfully", accessToken, roles: dbResponse[0][0].roles})
                 }else{
                     const myError = new Error("Invalid Credentials");
                     myError.statusCode = 406
@@ -90,7 +90,7 @@ const refreshController = async (req, res, next) => {
                     myError.statusCode = 403
                     throw myError
                 }else{
-                    const dbResponse = await sequelize.query("exec findASingleUserWithAllFields @name=:name", {replacements: {name: decoded.name}});
+                    const dbResponse = await sequelize.query("exec findASingleUserWithAllFields @name=:name", {replacements: {name: decoded.userInfo.name}});
                     if(dbResponse[1]){
                         const acessToken = jwt.sign(
                             {
@@ -136,7 +136,7 @@ const logoutController = async (req, res, next) => {
             })
             res.status(200).send({message: "Logged out successfully"})
         }else{
-            res.status(204)
+            res.status(204).send({message: "Logged ou successfully"})
         }
     } catch (error) {
         next(error)
@@ -149,3 +149,6 @@ module.exports = {
     logoutController,
     refreshController
 }
+
+
+// FIXME: Wherever you are using status code of 204, use sendStatus(204). It is not chainable if you only res.send(204), it will be treated as a pending n/w request.

@@ -44,3 +44,20 @@ Thu Mar 16 2023 20:53:39 GMT+0530 (India Standard Time)	7d2050e9-313e-4fdc-a0f4-
 Thu Mar 16 2023 20:53:46 GMT+0530 (India Standard Time)	49bc140d-d22a-4cc3-a6bc-9817f04e726d	Error: Not Authorized	GET	/auth/refresh	undefined
 Thu Mar 16 2023 20:54:34 GMT+0530 (India Standard Time)	ba1e8d89-42ed-4454-ac5a-be4e741f65b3	Error: Not Authorized	GET	/auth/refresh	undefined
 Thu Mar 16 2023 21:01:55 GMT+0530 (India Standard Time)	50fcb05b-79c1-4c15-a9dc-3d395248349c	Error: Not Authorized	GET	/auth/refresh	undefined
+Fri Mar 17 2023 09:30:05 GMT+0530 (India Standard Time)	6b69d921-78db-4226-b58a-1bfe18730d46	Error: Not Authorized	GET	/auth/refresh	undefined
+Fri Mar 17 2023 09:30:30 GMT+0530 (India Standard Time)	a746ade3-827e-4059-b567-60c793678849	Error: Not Authorized	GET	/auth/refresh	undefined
+Fri Mar 17 2023 13:07:43 GMT+0530 (India Standard Time)	aea3a809-6772-4056-bc43-8a3db928c47f	Error: Name is a required field	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:09:17 GMT+0530 (India Standard Time)	a6e85c97-c009-499f-8c26-e233728aaf4f	Error: Name is a required field	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:11:50 GMT+0530 (India Standard Time)	9cce9ef2-109e-48c3-9653-72e2815f1865	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:13:41 GMT+0530 (India Standard Time)	eb203ed5-1cdd-495f-ac0f-56ec1a592139	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:14:54 GMT+0530 (India Standard Time)	e9ff38d9-2b88-490c-912c-c0d892707705	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:16:46 GMT+0530 (India Standard Time)	7cdb147b-dcbe-4f0c-b5ca-7a325aecfccd	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:17:17 GMT+0530 (India Standard Time)	6751d1e6-4fa6-46f6-b05f-90613900a2c3	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:18:13 GMT+0530 (India Standard Time)	a75fa281-aa08-40d9-a602-9a46bd615686	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:21:18 GMT+0530 (India Standard Time)	c047f64b-88b3-4a59-aa41-a5cf786e2268	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:21:54 GMT+0530 (India Standard Time)	ca741e5f-3b37-4e9b-8e63-15fa48ce05b1	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:22:59 GMT+0530 (India Standard Time)	5baa9fe9-14e3-44e2-b9ba-d309f224e145	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:23:48 GMT+0530 (India Standard Time)	08405358-97d8-462e-87ea-c6aaa1554040	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Fri Mar 17 2023 13:29:58 GMT+0530 (India Standard Time)	8420abc5-ca54-466b-acff-005c5222727b	Too Many Requests: Too many login attempts from this IP, please try again after a minute pause	POST	/login	http://localhost:3000
+Fri Mar 17 2023 13:30:00 GMT+0530 (India Standard Time)	ebe94368-39cd-441e-a531-50542861c043	Too Many Requests: Too many login attempts from this IP, please try again after a minute pause	POST	/login	http://localhost:3000
+Fri Mar 17 2023 13:31:03 GMT+0530 (India Standard Time)	8b608d21-bbd4-4c22-ab80-3f103de12fff	Too Many Requests: Too many login attempts from this IP, please try again after a minute pause	POST	/login	http://localhost:3000
