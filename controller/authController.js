@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const expressValidator = require("express-validator");
 const sequelize = require("../utils/dbConnection");
+// TODO: Change the accessToken token for 15m in both create plcae for login, refresh controller & refreshToken to 1h in both cookie & create
 
 
 
@@ -36,7 +37,7 @@ const loginController = async (req, res, next) => {
                         },
                         process.env.ACCESS_TOKEN_SECRET,
                         {
-                            expiresIn: "1m"
+                            expiresIn: "10s"
                         }
                     )
                     // * Create Refresh Token
@@ -51,7 +52,7 @@ const loginController = async (req, res, next) => {
                         },
                         process.env.REFRESH_TOKEN_SECRET,
                         {
-                            expiresIn: "10m"
+                            expiresIn: "1m"
                         }
                     )
                     // * Set refreshToken as a secure cookie (Not accessible via JS)
@@ -59,7 +60,7 @@ const loginController = async (req, res, next) => {
                         httpOnly: true, 
                         secure: true, 
                         sameSite: 'None', 
-                        maxAge: 10 * 60 * 1000
+                        maxAge: 1 * 60 * 1000
                     })
                     res.status(200).send({message: "Logged In Successfully", accessToken, roles: dbResponse[0][0].roles})
                 }else{
@@ -92,7 +93,7 @@ const refreshController = async (req, res, next) => {
                 }else{
                     const dbResponse = await sequelize.query("exec findASingleUserWithAllFields @name=:name", {replacements: {name: decoded.userInfo.name}});
                     if(dbResponse[1]){
-                        const acessToken = jwt.sign(
+                        const accessToken = jwt.sign(
                             {
                                 userInfo: {
                                     id: dbResponse[0][0].id,
@@ -103,10 +104,10 @@ const refreshController = async (req, res, next) => {
                             },
                             process.env.ACCESS_TOKEN_SECRET,
                             {
-                                expiresIn: "1m"
+                                expiresIn: "10s"
                             }
                         )
-                        res.status(200).send({message: "Successfully got the new access Token", acessToken})
+                        res.status(200).send({message: "Successfully got the new access Token", accessToken, roles: dbResponse[0][0].roles})
                     }else{
                         const myError = new Error("Not Authorized");
                         myError.statusCode = 401
