@@ -52,7 +52,7 @@ const loginController = async (req, res, next) => {
                         },
                         process.env.REFRESH_TOKEN_SECRET,
                         {
-                            expiresIn: "1m"
+                            expiresIn: "10m"
                         }
                     )
                     // * Set refreshToken as a secure cookie (Not accessible via JS)
@@ -60,7 +60,7 @@ const loginController = async (req, res, next) => {
                         httpOnly: true, 
                         secure: true, 
                         sameSite: 'None', 
-                        maxAge: 1 * 60 * 1000
+                        maxAge: 10 * 60 * 1000
                     })
                     res.status(200).send({message: "Logged In Successfully", accessToken, roles: dbResponse[0][0].roles})
                 }else{

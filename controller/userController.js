@@ -65,8 +65,37 @@ const createNewUser = async (req, res, next) => {
 
 // * Update an existing user
 const updateUser = async (req, res, next) => {
-    
+    try {
+        const {id, updatingPassword } = req.body;
+        if(req.roles.includes("manager") || req.roles.includes("admin")){
+            const findResource = await sequelize.query("exec getaSingleUser @id=:id", {replacements: {id: id}});
+            if(findResource[1]){
+                const{active, name, roles} = req.body;
+                if(updatingPassword === "true"){
+                    const{ password } = req.body;
+                    const hashedPassword = await bcrypt.hash(password, 10)
+                    await sequelize.query("exec editAUserWithPassword @id=:id, @active=:active, @name=:name, @password=:password, @roles=:roles", {replacements: {id: id, name: name, active: active === "false" ? 0 : 1, roles: roles, password: hashedPassword}});
+                    res.status(200).send({message: "Successfully Updated the User"})
+                }else{
+                    await sequelize.query("exec editAUserWithOutPassword @id=:id, @active=:active, @name=:name, @roles=:roles", {replacements: {id: id, name: name, active: active === "false" ? 0 : 1, roles: roles}});
+                    res.status(200).send({message: "Successfully Updated the User"})
+                }
+            }else{
+                const myError = new Error("No resource exists with this identifier");
+                myError.statusCode = 404;
+                throw myError
+            }
+        }else{
+            const myError = new Error("Forbidden. You do not have necessary permission to perform this operation");
+            myError.statusCode = 403;
+            throw myError
+        }
+    } catch (error) {
+        next(error)
+    }
 }
+
+
 
 
 // * Delete an existing user

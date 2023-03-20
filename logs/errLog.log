@@ -116,3 +116,10 @@ Mon Mar 20 2023 15:59:10 GMT+0530 (India Standard Time)	1481b3b5-f75c-48df-87ce-
 Mon Mar 20 2023 18:00:45 GMT+0530 (India Standard Time)	729832a7-3f39-4803-8896-8954749150e0	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
 Mon Mar 20 2023 18:01:56 GMT+0530 (India Standard Time)	f283cd7f-0b0a-4d29-98da-14127aeddacd	Error: The Notes are currently assigned to user. Delete all notes assigned to this user first.	DELETE	/users/delete-user/100	http://localhost:3000
 Mon Mar 20 2023 18:02:19 GMT+0530 (India Standard Time)	1e38a7b0-5a79-4bff-8844-92d13b184ed2	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
+Mon Mar 20 2023 20:39:18 GMT+0530 (India Standard Time)	a87f5c91-b495-4cbc-a4f8-20e303f91351	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
+Mon Mar 20 2023 20:51:33 GMT+0530 (India Standard Time)	bf603bbb-6f54-463e-ba8c-6aca97dce97f	Error: Invalid Credentials	POST	/auth/login	http://localhost:3000
+Mon Mar 20 2023 21:16:10 GMT+0530 (India Standard Time)	3bae22a3-3d4e-4c50-9d87-c3bb84036d90	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
+Mon Mar 20 2023 22:53:50 GMT+0530 (India Standard Time)	a57285c0-e206-4e8a-ab9f-689b91aa2304	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
+Mon Mar 20 2023 23:08:28 GMT+0530 (India Standard Time)	273a6ffd-acd2-4ace-bb2d-dc1d609efe4b	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
+Mon Mar 20 2023 23:09:21 GMT+0530 (India Standard Time)	fb39ac07-f79b-466d-b32f-5e53d32ea6c7	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
+Mon Mar 20 2023 23:09:36 GMT+0530 (India Standard Time)	77a99e62-3feb-41a2-be1c-21b8543587fd	Error: Not Authorized	GET	/auth/refresh	http://localhost:3000
