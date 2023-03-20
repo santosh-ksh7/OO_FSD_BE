@@ -37,10 +37,12 @@ const createNewUser = async (req, res, next) => {
             myError.statusCode = 422;
             throw myError;
         }else{
+            // * Also can put additional check in backend that only manager and admin can create new user
             // * when there is no validation error
             const name = req.body.name;
             const password = req.body.password;
             const roles = req.body.roles;
+            console.log("🚀 ~ file: userController.js:45 ~ createNewUser ~ roles:", roles)
             // * Check if a user with same name already exists or not
             const dbResponse = await sequelize.query("exec findASingleUser @name=:name", {replacements: {name: name}});
             if(dbResponse[0]?.length){
@@ -68,8 +70,36 @@ const updateUser = async (req, res, next) => {
 
 
 // * Delete an existing user
-const deleteUser = async (req, res) => {
-
+const deleteUser = async (req, res, next) => {
+    try {
+        // * Additional check to put, The same user can't delete himself
+        if(req.roles.includes("manager") || req.roles.includes(admin)){
+            const {id} = req.params
+            console.log("🚀 ~ file: userController.js:78 ~ deleteUser ~ id:", id)
+            const dbResponse = await sequelize.query("exec getaSingleUser @id=:id", {replacements: {id: id}});
+            if(dbResponse[1]){
+                const checkAssignedNotes = await sequelize.query("exec getAllNotesBelongingToAUser @userid=:userid", {replacements: {userid: id}});
+                if(checkAssignedNotes[1]){
+                    const myError = new Error("The Notes are currently assigned to user. Delete all notes assigned to this user first.");
+                    myError.statusCode = 400;
+                    throw myError
+                }else{
+                    await sequelize.query("exec delAUser @id=:id", {replacements: {id: Number(id)}});
+                    res.status(200).send({message: "User Successfully deleted"})
+                }
+            }else{
+                const myError = new Error("No User with the identifier found");
+                myError.statusCode = 404;
+                throw myError
+            }
+        }else{
+            const myError = new Error("You don't have valid persmission to perform the requets");
+            myError.statusCode = 403;
+            throw myError
+        }
+    } catch(error) {
+        next(error);
+    }
 }
 
 

@@ -33,12 +33,10 @@ router.route("/")
                     throw new Error("Both Password should match");
                 }
             }),
-            // expressValidator.body("roles").isJSON()
         ] ,
         createNewUser
     )
     .patch(updateUser)
-    .delete(deleteUser)
 
 
 
@@ -47,6 +45,8 @@ router.route("/")
 // * Get a specific User
 
 router.get("/:id", getASingleUser)
+
+router.delete("/delete-user/:id", deleteUser)
 
 
 module.exports = router;
